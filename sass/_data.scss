@@ -1,0 +1,114 @@
+.data{
+    //margin-top: 20px;
+    min-height:110vh;
+    min-width:100%;
+    bottom: 0;
+    background-color: $navcolor;
+    .content{
+        padding: 20px;
+        padding-left: 40px;
+    }
+    .container-fluid{
+        display: flex;
+        .content__row{
+            height: 100%;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            .content__col{
+                height: 60%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                //row-gap: 400px;
+               // border: 1px solid red;
+                .home__card{
+                    height: 40%;
+                    width: 100% !important;
+                    display: flex;
+                    //flex-flow: column wrap;
+                    align-items: center;
+                    justify-content: flex-start;
+                    column-gap: 20px;
+                    margin-top: 20px;
+                    row-gap: 40px;
+                    @media screen and (max-width: 1000px){
+                            flex-direction: row-reverse;
+                    }
+                   // border: 1px solid red;
+                    //flex-wrap: wrap;
+                   // border: 1px solid red;
+                   .home__image{
+                    overflow: hidden;
+                     height: 150px;
+                     width: 350px;
+                     .card-img-top{
+                      //  height: 150px;
+                      width: 100%;
+                      height: 100%;
+                       object-fit: cover;
+                     }
+                   }
+                    .right-content{
+                        height:150px;
+                        width: 100%;
+                       // border: 1px solid red;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items:flex-start ;
+                        row-gap: 20px;
+                        li{
+                            list-style: none;
+                        }
+                       
+                        .card-title{
+                            font-size: 25px;
+                            @media screen and (max-width: 1000px){
+                                font-size: 15px;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 12px;
+                            }
+                            color: $headcolor;
+                            font-weight: 500;
+                        }
+                        .desc{
+                            height: 80%;
+                            width:60%;
+                            @media screen and (max-width: 1000px){
+                                display: none;
+                                font-size: 10px;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 8px;
+                            }
+                            color: $headcolor;
+                        }
+                        .tag{
+                            @media screen and (max-width: 1000px){
+                                font-size: 15px;
+                            }
+                            @media screen and (max-width: 600px){
+                                font-size: 12px;
+                            }
+                            color: $textcolor;
+                        }
+                        ul{
+                            height: 100%;
+                            width:100%;
+                          //  border: 1px solid red;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content:flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

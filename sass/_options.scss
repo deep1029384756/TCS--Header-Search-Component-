@@ -1,0 +1,33 @@
+.options{
+    min-height: 10vh;
+    width: 100%;
+    color: $headcolor;
+    position: fixed;
+    background-color: $navcolor;
+    top: 97px;
+    display: flex;
+    display: none;
+    .search__options{
+        margin-left: 70px;
+        .list-bucket{
+          //  height: 100%;
+            width: 100%;
+        }
+        .options__list{
+            height: 100%;
+            width:100%;
+           /// border-bottom: 1px solid $headcolor;
+            padding: 10px;
+            cursor: pointer;
+           // border: 1px solid red;
+           
+
+        }
+        .options__list:hover{
+            border-bottom: 1px solid $headcolor;
+        }
+    }
+}
+.addOptions{
+    display: flex;
+}

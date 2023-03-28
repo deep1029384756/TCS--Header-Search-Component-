@@ -1,0 +1,151 @@
+.accordian{
+    min-height:100vh;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width:50vw;
+    background-color: $navcolor;
+    position: fixed;
+    top: 80px;
+    left:0;
+    display: none;
+    @media screen and (max-width: 600px) {
+        width:100vw !important;
+    }
+    .accordion-menu{
+       // top: 70px;
+        z-index: 99;
+        position: absolute;
+        left: 0;
+       // display: none;
+      }
+      ul.menu {
+        overflow-y: scroll;
+        background-color: $navcolor;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      //  width: 350px;
+        font-family: "Century Gothic";
+      //  width: 50vw;
+        @media screen and (max-width:600px) {
+          display: 100vw;
+        }
+        
+        clear: both;
+        //display: table;
+        height: 100vh;
+        padding-top: 10px;
+      }
+    
+      ul.menu .list {
+      font-size: 20px;
+      border-bottom: 1px solid $navcolor;
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      /* height: 50px; */
+     // vertical-align: sub;
+      background-color: $navcolor;
+     clear: both;
+      }
+      ul.menu .list:after {
+      content: "";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      padding: 0px 5px;
+      color: #fff;
+      }
+      ul.menu .list1:after {
+        content: "+";
+        font-family: FontAwesome;
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        padding: 0px 5px;
+        color: #fff;
+        }
+      ul.menu .list a {
+      text-decoration: none;
+      color: #fff;
+      padding: 17px 0px 17px 45px;
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      }
+      ul.menu .list a:hover {
+      /* background-color: #324252; */
+      transition: 300ms all;
+      /* color: #09fbd2; */
+      }
+      ul.menu .list .items {
+      height: 0px;
+      overflow: hidden;
+      }
+      ul.menu .list .items a {
+      padding: 17px;
+      }
+      ul.menu .list .items a:hover {
+      /* background-color: #3f5d79; */
+      color: #fff;
+      transition: 300ms all;
+      }
+      ul.menu .list:last-child {
+      border-bottom: none;
+      }
+      ul.menu .active:after {
+      content: "";
+      font-family: FontAwesome;
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      padding: 0px 5px;
+      color: #fff;
+      }
+      ul.menu .list .active:after {
+        content: "-";
+        font-family: FontAwesome;
+        position: absolute;
+        right: 17px;
+        top: 17px;
+        //padding: 0px 5px;
+        color: #fff;
+        }
+      ul.menu .active > .items {
+      display: block;
+      /* background: #23313f; */
+      padding: 0px;
+      height: auto;
+      color: #fff;
+      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: all 200ms;
+      clear: both;
+      float: left;
+      width: 100%;
+      }
+      ul.menu .active > .items li {
+      padding-left: 33px;
+    //  border-bottom: 1px solid  $headcolor;
+      list-style: none;
+      font-size: 15px;
+      }
+      ul.menu .active > .items1 li {
+     //   padding-left: 25px;
+      //  border-bottom: 1px solid $headcolor;
+        list-style: none;
+        font-size: 12px;
+        }
+      
+      ul.menu .active > .items li:last-child {
+      border-color: transparent;
+      padding-bottom: 0px;
+      }
+      ul.menu .active > a {
+      //text-transform: uppercase;
+      
+      }
+}
+.show_accordian{
+  display: block;
+  
+}
