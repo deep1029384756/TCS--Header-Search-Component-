@@ -218,90 +218,118 @@
 .big-section{
   background-color: $navcolor !important;
   .insights{
-    height:60vh;
-      position: absolute;
-      top:100px;
-      width:100vw;
-      display: flex;
-      background-color: $navcolor;
+    height: 60vh;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100vw;
+    // display: flex;
+    background-color: $navcolor;
+    display: none;
+    align-items: flex-start;
+    justify-content: space-around;
+    @media screen and (max-width: 1000px) {
       display: none;
-      align-items: flex-start;
-      justify-content: space-around;
-      @media screen and (max-width: 1000px) {
-          display: none;
-          visibility: hidden;;
+      visibility: hidden;
+    }
+    .what__list {
+      margin-top: 30px;
+      color: $textcolor;
+      //margin-top: 20px;
+      height: 87%;
+      width: 30%;
+      > ul {
+        width: 100%;
+        height: 90%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+        position: relative;
+        li {
+          align-self: center;
+          margin-left: 10px;
+          height: 19%;
+          text-align: center;
+          display: flex;
+          font-size: 16px;
+          width: 68%;
+          justify-content: space-between;
+          border-bottom: 1px solid grey;
+          padding-top: 20px;
+          .fa-angle-right {
+            color: $headcolor;
+          }
         }
-        .what__list{
-                  margin-top: 30px;
-                  color: $textcolor;
-                  //margin-top: 20px;
-                  height: 87%;
-                  width:30%;
-                  ul{
-                      width:100%;
-                      height:90%;
-                      list-style: none;
-                      display: flex;
-                      flex-direction: column;
-                      row-gap: 10px;
-                      li{
-                          align-self: center;
-                          margin-left: 10px;
-                          height: 16%;
-                          text-align: center;
-                          display: flex;
-                          font-size: 16px;
-                          width:68%;
-                          justify-content: space-between;
-                          border-bottom: 1px solid grey; 
-                          padding-top: 20px;
-                          .fa-angle-right{
-                              color:$headcolor
-                          }
-                      }
-                      li:hover{
-                          color:$headcolor;
-                          background-color: rgba(255,255,255,0.1);
-                      }
-                  }
-              }
-              .what__section{
-                 // border: 1px solid red;
-                 margin-top: 30px;
-                  height:100%;
-                  width:68%;
-                  display: flex;
-                  justify-content: flex-start;
-                  flex-direction: column;
-                  row-gap: 55px;
-                  .what__head{
-                      display: flex;
-                      flex-direction: column;
-                      row-gap: 20px;
-                      .what__title{
-                          width:60%;
-                          font-size: 30px;
-                          color: $headcolor;
-                      }
-                      .what__para{
-                          //text-align: center;
-                          color: $textcolor;
-                      }
-                  }
-                  .what__button{
-                      width:20%;
-                      border:1px solid $headcolor;
-                      padding: 10px;
-                      border-radius: 20px;
-                      color: $headcolor;
-                      text-align: center;
-                      transition: all 0.5s ease;
-                  }
-                  .what__button:hover{
-                      cursor: pointer;
-                      background-color: rgba(0,0,0,0.3);
-                  }
-              }
+        .inoverview{
+            .inoverview-section{
+                position: absolute;
+              //  height: 50vh;
+                width: 800px;
+                left: 330px;
+                padding: 20px;
+                padding-left: 50px;
+                top: -30px;
+               // background-color: rgba(0,0,0,0.3);
+                margin-top: 30px;
+                height:100%;
+               // width:68%;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                row-gap: 55px;
+               // border: 1px solidred;
+              display: none;
+                .what__head{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+                    .what__title{
+                        text-align: start;
+                        width:60%;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $headcolor;
+                    }
+                    .what__para{
+                        text-align: start;
+                        font-weight: 400;
+                        color: $textcolor;
+                    }
+                }
+                .what__button{
+                    margin-top: 50px;
+                    width:40%;
+                    border:1px solid $headcolor;
+                    padding: 20px;
+                    border-radius: 40px;
+                    font-weight: 400;
+                    color: $headcolor;
+                    text-align: center;
+                    transition: all 0.5s ease;
+                }
+                .what__button:hover{
+                    cursor: pointer;
+                    background-color: rgba(0,0,0,0.3);
+                }
+            }
+        }
+        .select{
+            .inoverview-section{
+                display: block !important;
+            }
+            color:$headcolor !important;
+          background-color: rgba(255,255,255,0.1) !important;
+        }
+        .inoverview:hover{
+            .inoverview-section{
+                display: block;
+            }
+            color:$headcolor !important;
+            background-color: rgba(255,255,255,0.1) !important;
+        }
+    }
+}
           }
           .list-content1{
               display: none !important;

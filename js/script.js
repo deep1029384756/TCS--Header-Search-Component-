@@ -28,32 +28,113 @@ const solutionCross = document.querySelector(".tags__solutioncross");
 const whiteCross = document.querySelector(".tags__papercross");
 const caseCross = document.querySelector(".tags__casecross");
 
+//first item
+const overviewButton = document.querySelector(".overview")
+const industryButton = document.querySelector(".industries")
+const servicesButton = document.querySelector(".services")
+const raiButton = document.querySelector(".rai")
+const papButton = document.querySelector(".pap")
+overviewButton.addEventListener("mouseleave",()=>{
+  overviewButton.classList.remove("select")
+})
+industryButton.addEventListener("mouseleave",()=>{
+  overviewButton.classList.remove("select")
+})
+servicesButton.addEventListener("mouseleave",()=>{
+  overviewButton.classList.remove("select")
+})
+raiButton.addEventListener("mouseleave",()=>{
+  overviewButton.classList.remove("select")
+})
+papButton.addEventListener("mouseleave",()=>{
+  overviewButton.classList.remove("select")
+})
+
+//who section
+const woverviewButton = document.querySelector(".woverview")
+const whoAbout = document.querySelector(".industries")
+const leader = document.querySelector(".services")
+const inNews = document.querySelector(".rai")
+woverviewButton.addEventListener("mouseleave",()=>{
+  woverviewButton.classList.remove("select")
+})
+whoAbout.addEventListener("mouseleave",()=>{
+  woverviewButton.classList.remove("select")
+})
+leader.addEventListener("mouseleave",()=>{
+  woverviewButton.classList.remove("select")
+})
+inNews.addEventListener("mouseleave",()=>{
+  woverviewButton.classList.remove("select")
+})
+//insight section
+const insightOverButton = document.querySelector(".inoverview")
+const custButton = document.querySelector(".cust")
+const persButton = document.querySelector(".pers")
+const topicButton = document.querySelector(".topic")
+insightOverButton.addEventListener("mouseleave",()=>{
+  insightOverButton.classList.remove("select")
+})
+whoAbout.addEventListener("mouseleave",()=>{
+  insightOverButton.classList.remove("select")
+})
+leader.addEventListener("mouseleave",()=>{
+  insightOverButton.classList.remove("select")
+})
+inNews.addEventListener("mouseleave",()=>{
+  insightOverButton.classList.remove("select")
+})
+
+//insight section
+const careerButton = document.querySelector(".career-overview")
+const indiautton = document.querySelector(".india")
+const amerButton = document.querySelector(".america")
+const asiaButton = document.querySelector(".asia")
+careerButton.addEventListener("mouseleave",()=>{
+  careerButton.classList.remove("select")
+})
+indiautton.addEventListener("mouseleave",()=>{
+  careerButton.classList.remove("select")
+})
+amerButton.addEventListener("mouseleave",()=>{
+  careerButton.classList.remove("select")
+})
+asiaButton.addEventListener("mouseleave",()=>{
+  careerButton.classList.remove("select")
+})
+
+
 const remove = () => {
   line1.classList.remove("show_nav");
   line2.classList.remove("show_nav");
   line3.classList.remove("show_nav");
   line4.classList.remove("show_nav");
-  who.classList.remove("show");
-  what.classList.remove("show");
-  insights.classList.remove("show");
-  careers.classList.remove("show");
+  who.classList.remove("show-section");
+  what.classList.remove("show-section");
+  insights.classList.remove("show-section");
+  careers.classList.remove("show-section");
+  overviewButton.classList.remove("select")
+  woverviewButton.classList.remove("select")
+  insightOverButton.classList.remove("select")
+  careerButton.classList.remove("select")
 };
 
-const show = (section, line) => {
+const show = (section, line,buttonsh) => {
   remove();
   line.classList.add("show_nav");
-  section.classList.add("show");
+  section.classList.add("show-section");
+  buttonsh.classList.add("select")
 };
 
-whatElement.addEventListener("mouseenter", () => show(what, line1));
-whoElement.addEventListener("mouseenter", () => show(who, line2));
-insightsElement.addEventListener("mouseenter", () => show(insights, line3));
-careersElement.addEventListener("mouseenter", () => show(careers, line4));
+whatElement.addEventListener("mouseenter", () => show(what, line1,overviewButton));
+whoElement.addEventListener("mouseenter", () => show(who, line2,woverviewButton));
+insightsElement.addEventListener("mouseenter", () => show(insights, line3,insightOverButton));
+careersElement.addEventListener("mouseenter", () => show(careers, line4,careerButton));
 
-what.addEventListener("mouseenter", () => show(what, line1));
-who.addEventListener("mouseenter", () => show(who, line2));
-insights.addEventListener("mouseenter", () => show(insights, line3));
-careers.addEventListener("mouseenter", () => show(careers, line4));
+what.addEventListener("mouseenter", () => show(what, line1,overviewButton));
+who.addEventListener("mouseenter", () => show(who, line2,woverviewButton));
+insights.addEventListener("mouseenter", () => show(insights, line3,insightOverButton));
+careers.addEventListener("mouseenter", () => show(careers, line4,careerButton));
 
 whatElement.addEventListener("mouseleave", () => remove());
 whoElement.addEventListener("mouseleave", () => remove());
@@ -107,42 +188,7 @@ closeMenu1.addEventListener("click", () => {
 });
 
 // careers sevction
-var over = document.querySelector(".over");
-var industries = document.querySelector(".industries");
-var services = document.querySelector(".services");
-var product = document.querySelector(".product");
-var overSection = document.querySelector(".list-content1");
-var industriesSection = document.querySelector(".list-content2");
-var servicesSection = document.querySelector(".list-content3");
-var productSection = document.querySelector(".list-content4");
 
-industries.addEventListener("mouseenter", () => {
-  industriesSection.classList.add("show");
-  overSection.classList.remove("show");
-  servicesSection.classList.remove("show");
-  productSection.classList.remove("show");
-});
-
-over.addEventListener("mouseenter", () => {
-  industriesSection.classList.remove("show");
-  overSection.classList.add("show");
-  servicesSection.classList.remove("show");
-  productSection.classList.remove("show");
-});
-
-services.addEventListener("mouseenter", () => {
-  industriesSection.classList.remove("show");
-  overSection.classList.remove("show");
-  servicesSection.classList.add("show");
-  productSection.classList.remove("show");
-});
-
-product.addEventListener("mouseenter", () => {
-  industriesSection.classList.remove("show");
-  overSection.classList.remove("show");
-  servicesSection.classList.remove("show");
-  productSection.classList.add("show");
-});
 
 //what
 
@@ -450,8 +496,19 @@ searchText.addEventListener("change",(e)=>{
       }
   })
   if(newda.length== 0) newda.push(...data); //push all if empty
+ 
   var data = newda.filter((ele) =>{
-    return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
+    console.log(ele.title);
+    let string1 = ele.title.split(" ");
+    console.log(string1)
+    let res =  string1.some(inner=>{
+      if(inner.toLowerCase().indexOf(value.toLowerCase()) == 0){
+        return true;
+      }  
+    })
+    if(res) return true;
+    else return false;
+    //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
   });
 
   htmlDisplay.innerHTML = "";
@@ -488,8 +545,19 @@ searchText.addEventListener("input",(e)=>{
     if(newda.length== 0)newda.push(...data); //push all if empty
     console.log(newda)
     var data = newda.filter((ele) =>{
-      return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
+      console.log(ele.title);
+      let string1 = ele.title.split(" ");
+      console.log(string1)
+      let res =  string1.some(inner=>{
+        if(inner.toLowerCase().indexOf(value.toLowerCase()) == 0){
+          return true;
+        }  
+      })
+      if(res) return true;
+      else return false;
+      //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
     });
+  
     searchOptions.textContent = "";
     let listBucket = document.createElement("div");
     listBucket.classList.add("Fget")
@@ -554,3 +622,15 @@ for (i = 0; i < list.length; i++) {
   list[i].addEventListener("click", accordion);
 }
 
+//document
+document.addEventListener("scroll",()=>{
+  let x = window.scrollY;
+  if(x > 100){
+   // console.log(x)
+   header.classList.remove("header-height")
+    header.classList.add("changeNav")
+  }else{
+    header.classList.remove("changeNav")
+    header.classList.add("header-height")
+  }
+})

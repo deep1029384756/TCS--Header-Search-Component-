@@ -7,6 +7,9 @@
     top: 80px;
     left:0;
     display: none;
+    @media screen and (min-width: 1000px){
+      display: none !important;
+    }
     @media screen and (max-width: 600px) {
         width:100vw !important;
     }
@@ -29,7 +32,6 @@
         @media screen and (max-width:600px) {
           display: 100vw;
         }
-        
         clear: both;
         //display: table;
         height: 100vh;
@@ -104,10 +106,11 @@
       }
       ul.menu .list .active:after {
         content: "-";
+        font-size: 40px;
         font-family: FontAwesome;
         position: absolute;
-        right: 17px;
-        top: 17px;
+        right:17px;
+        top: -2px;
         //padding: 0px 5px;
         color: #fff;
         }
