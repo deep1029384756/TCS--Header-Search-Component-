@@ -7,6 +7,10 @@
     top: 80px;
     left:0;
     display: none;
+    animation: goleft 500ms ease forwards;
+     transform-origin: right;
+
+     
     @media screen and (min-width: 1000px){
       display: none !important;
     }
@@ -21,6 +25,7 @@
        // display: none;
       }
       ul.menu {
+        
         overflow-y: scroll;
         background-color: $navcolor;
         margin: 0;
@@ -39,6 +44,7 @@
       }
     
       ul.menu .list {
+        
       font-size: 20px;
       border-bottom: 1px solid $navcolor;
       position: relative;
@@ -50,7 +56,8 @@
      clear: both;
       }
       ul.menu .list:after {
-      content: "";
+        
+        content: "";
       font-family: FontAwesome;
       position: absolute;
       right: 17px;
@@ -59,6 +66,7 @@
       color: #fff;
       }
       ul.menu .list1:after {
+       
         content: "+";
         font-family: FontAwesome;
         position: absolute;
@@ -68,6 +76,7 @@
         color: #fff;
         }
       ul.menu .list a {
+        
       text-decoration: none;
       color: #fff;
       padding: 17px 0px 17px 45px;
@@ -77,6 +86,7 @@
       }
       ul.menu .list a:hover {
       /* background-color: #324252; */
+      
       transition: 300ms all;
       /* color: #09fbd2; */
       }
@@ -96,7 +106,8 @@
       border-bottom: none;
       }
       ul.menu .active:after {
-      content: "";
+     
+      content: "";
       font-family: FontAwesome;
       position: absolute;
       right: 17px;
@@ -117,6 +128,9 @@
       ul.menu .active > .items {
       display: block;
       /* background: #23313f; */
+      // transition: transform 0.8 ease;
+       animation : flowdown 500ms ease forwards;
+       transform-origin: top;
       padding: 0px;
       height: auto;
       color: #fff;
@@ -147,6 +161,23 @@
       //text-transform: uppercase;
       
       }
+}
+@keyframes goleft{
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+
+@keyframes transdown{
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateX(1px);
+  }
 }
 .show_accordian{
   display: block;

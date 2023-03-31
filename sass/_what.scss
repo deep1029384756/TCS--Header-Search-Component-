@@ -4,11 +4,14 @@
         height:60vh;
         position: absolute;
         left: 0;
-        top:100px;
+        top:85px;
         width:100vw;
        // display: flex;
         background-color: $navcolor;
         display: none;
+       transition: transform 0.8 ease;
+       animation : flowdown 500ms ease forwards;
+       transform-origin: top;
         align-items: flex-start;
         justify-content: space-around;
         @media screen and (max-width: 1000px) {
@@ -127,8 +130,8 @@
                                 flex-direction: column;
                                 row-gap: 55px;
                                // border: 1px solid red;
-                                
                                 display: none;
+                                
                                 .what__head{
                                     //border: 1px solid blue;
                                     display: flex;
@@ -148,7 +151,7 @@
                                             //height: 100%;
                                             width: 100%;
                                             border-bottom :1px solid $navcolor ;
-                                           
+                                           cursor: pointer;
                                            // text-align: start;
                                             display: flex;
                                             justify-content: flex-start;
@@ -203,7 +206,7 @@
                                    //height: 100%;
                                    width: 100%;
                                    border-bottom :1px solid $navcolor ;
-                                  
+                                  cursor: pointer;
                                   // text-align: start;
                                    display: flex;
                                    justify-content: flex-start;
@@ -256,6 +259,7 @@
                                flex-direction: column;
                                row-gap: 10px;
                                li{
+                                cursor: pointer;
                                    font-size: 15px;
                                    //height: 100%;
                                    width: 100%;
@@ -309,6 +313,7 @@
                            ul{
                               // border: 1px solid red;
                                width: 30%;
+                               cursor: pointer;
                              //  height: 100%;
                                margin-bottom: 100px;
                                display: flex;
@@ -367,10 +372,17 @@
     }
     .show-section{
         display: block !important;
+       // transform: scale(1);
         // @media only screen and (min-width:1000px){
         //      display: none;
         //  }
     }
-
-    
-
+//aniatin
+@keyframes flowdown{
+    from{
+        transform: scaleY(0);
+    }
+    to{
+        transform: scaleY(1);
+    }
+}

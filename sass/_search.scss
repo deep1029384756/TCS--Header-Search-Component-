@@ -1,5 +1,8 @@
 .search{
     margin-top: -200px;
+    transition: transform 0.8 ease;
+       animation : flowdown 500ms ease-in-out forwards;
+       transform-origin: top;
     background-color: $navcolor;
     position: fixed;
     top:0;
@@ -11,20 +14,21 @@
     row-gap: 2px;
     align-items: center;
     justify-content: center;
+  display: none;
     .search__container{
         padding-bottom: 20px;
         border-bottom: 1px solid $headcolor;
         max-width:1600px;
         //padding: 10px;
-        margin-top: 40px;
+        //margin-top: 10px;
         width: 95%;
         justify-self: center;
         display: flex;
-        height: 60px;
+        height: 85px;
         justify-content: space-between;
         .search__icon{
             width: 5%;
-            margin-top: 7px;
+            margin-top: 20px;
             height:25px;
             width:25px;
             cursor: pointer;
@@ -65,5 +69,6 @@
 }
 
 .showSearch{
-    margin-top: 0;
+    margin-top: -0px;
+    display: block;
 }

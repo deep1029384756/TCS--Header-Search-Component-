@@ -29,80 +29,103 @@ const whiteCross = document.querySelector(".tags__papercross");
 const caseCross = document.querySelector(".tags__casecross");
 
 //first item
-const overviewButton = document.querySelector(".overview")
-const industryButton = document.querySelector(".industries")
-const servicesButton = document.querySelector(".services")
-const raiButton = document.querySelector(".rai")
-const papButton = document.querySelector(".pap")
-overviewButton.addEventListener("mouseleave",()=>{
-  overviewButton.classList.remove("select")
-})
-industryButton.addEventListener("mouseleave",()=>{
-  overviewButton.classList.remove("select")
-})
-servicesButton.addEventListener("mouseleave",()=>{
-  overviewButton.classList.remove("select")
-})
-raiButton.addEventListener("mouseleave",()=>{
-  overviewButton.classList.remove("select")
-})
-papButton.addEventListener("mouseleave",()=>{
-  overviewButton.classList.remove("select")
-})
+const overviewButton = document.querySelector(".overview");
+const industryButton = document.querySelector(".industries");
+const servicesButton = document.querySelector(".services");
+const raiButton = document.querySelector(".rai");
+const papButton = document.querySelector(".pap");
+// overviewButton.addEventListener("mouseleave", () => {
+//   overviewButton.classList.remove("select");
+// });
+industryButton.addEventListener("mouseleave", () => {
+  overviewButton.classList.add("select");
+});
+servicesButton.addEventListener("mouseleave", () => {
+  overviewButton.classList.add("select");
+});
+raiButton.addEventListener("mouseleave", () => {
+  overviewButton.classList.add("select");
+});
+papButton.addEventListener("mouseleave", () => {
+  overviewButton.classList.add("select");
+});
+//remove on hovering
+industryButton.addEventListener("mouseenter", () => {
+  overviewButton.classList.remove("select");
+});
+servicesButton.addEventListener("mouseenter", () => {
+  overviewButton.classList.remove("select");
+});
+raiButton.addEventListener("mouseenter", () => {
+  overviewButton.classList.remove("select");
+});
+papButton.addEventListener("mouseenter", () => {
+  overviewButton.classList.remove("select");
+});
 
 //who section
-const woverviewButton = document.querySelector(".woverview")
-const whoAbout = document.querySelector(".industries")
-const leader = document.querySelector(".services")
-const inNews = document.querySelector(".rai")
-woverviewButton.addEventListener("mouseleave",()=>{
-  woverviewButton.classList.remove("select")
-})
-whoAbout.addEventListener("mouseleave",()=>{
-  woverviewButton.classList.remove("select")
-})
-leader.addEventListener("mouseleave",()=>{
-  woverviewButton.classList.remove("select")
-})
-inNews.addEventListener("mouseleave",()=>{
-  woverviewButton.classList.remove("select")
-})
+const woverviewButton = document.querySelector(".woverview");
+const whoAbout = document.querySelector(".industries");
+const leader = document.querySelector(".services");
+const inNews = document.querySelector(".rai");
+woverviewButton.addEventListener("mouseleave", () => {
+  woverviewButton.classList.remove("select");
+});
+whoAbout.addEventListener("mouseenter", () => {
+  woverviewButton.classList.remove("select");
+});
+leader.addEventListener("mouseenter", () => {
+  woverviewButton.classList.remove("select");
+});
+inNews.addEventListener("mouseenter", () => {
+  woverviewButton.classList.remove("select");
+});
+
+//add
+whoAbout.addEventListener("mouseleave", () => {
+  woverviewButton.classList.add("select");
+});
+leader.addEventListener("mouseleave", () => {
+  woverviewButton.classList.add("select");
+});
+inNews.addEventListener("mouseleave", () => {
+  woverviewButton.classList.add("select");
+});
 //insight section
-const insightOverButton = document.querySelector(".inoverview")
-const custButton = document.querySelector(".cust")
-const persButton = document.querySelector(".pers")
-const topicButton = document.querySelector(".topic")
-insightOverButton.addEventListener("mouseleave",()=>{
-  insightOverButton.classList.remove("select")
-})
-whoAbout.addEventListener("mouseleave",()=>{
-  insightOverButton.classList.remove("select")
-})
-leader.addEventListener("mouseleave",()=>{
-  insightOverButton.classList.remove("select")
-})
-inNews.addEventListener("mouseleave",()=>{
-  insightOverButton.classList.remove("select")
-})
+const insightOverButton = document.querySelector(".inoverview");
+const custButton = document.querySelector(".cust");
+const persButton = document.querySelector(".pers");
+const topicButton = document.querySelector(".topic");
+insightOverButton.addEventListener("mouseleave", () => {
+  insightOverButton.classList.remove("select");
+});
+whoAbout.addEventListener("mouseleave", () => {
+  insightOverButton.classList.remove("select");
+});
+leader.addEventListener("mouseleave", () => {
+  insightOverButton.classList.remove("select");
+});
+inNews.addEventListener("mouseleave", () => {
+  insightOverButton.classList.remove("select");
+});
 
 //insight section
-const careerButton = document.querySelector(".career-overview")
-const indiautton = document.querySelector(".india")
-const amerButton = document.querySelector(".america")
-const asiaButton = document.querySelector(".asia")
-careerButton.addEventListener("mouseleave",()=>{
-  careerButton.classList.remove("select")
-})
-indiautton.addEventListener("mouseleave",()=>{
-  careerButton.classList.remove("select")
-})
-amerButton.addEventListener("mouseleave",()=>{
-  careerButton.classList.remove("select")
-})
-asiaButton.addEventListener("mouseleave",()=>{
-  careerButton.classList.remove("select")
-})
-
+const careerButton = document.querySelector(".career-overview");
+const indiautton = document.querySelector(".india");
+const amerButton = document.querySelector(".america");
+const asiaButton = document.querySelector(".asia");
+careerButton.addEventListener("mouseleave", () => {
+  careerButton.classList.remove("select");
+});
+indiautton.addEventListener("mouseleave", () => {
+  careerButton.classList.remove("select");
+});
+amerButton.addEventListener("mouseleave", () => {
+  careerButton.classList.remove("select");
+});
+asiaButton.addEventListener("mouseleave", () => {
+  careerButton.classList.remove("select");
+});
 
 const remove = () => {
   line1.classList.remove("show_nav");
@@ -113,28 +136,40 @@ const remove = () => {
   what.classList.remove("show-section");
   insights.classList.remove("show-section");
   careers.classList.remove("show-section");
-  overviewButton.classList.remove("select")
-  woverviewButton.classList.remove("select")
-  insightOverButton.classList.remove("select")
-  careerButton.classList.remove("select")
+  // overviewButton.classList.remove("select")
+  // woverviewButton.classList.remove("select")
+  // insightOverButton.classList.remove("select")
+  // careerButton.classList.remove("select")
 };
 
-const show = (section, line,buttonsh) => {
+const show = (section, line, buttonsh) => {
   remove();
   line.classList.add("show_nav");
   section.classList.add("show-section");
-  buttonsh.classList.add("select")
+  buttonsh.classList.add("select");
 };
 
-whatElement.addEventListener("mouseenter", () => show(what, line1,overviewButton));
-whoElement.addEventListener("mouseenter", () => show(who, line2,woverviewButton));
-insightsElement.addEventListener("mouseenter", () => show(insights, line3,insightOverButton));
-careersElement.addEventListener("mouseenter", () => show(careers, line4,careerButton));
+whatElement.addEventListener("mouseenter", () =>
+  show(what, line1, overviewButton)
+);
+whoElement.addEventListener("mouseenter", () =>
+  show(who, line2, woverviewButton)
+);
+insightsElement.addEventListener("mouseenter", () =>
+  show(insights, line3, insightOverButton)
+);
+careersElement.addEventListener("mouseenter", () =>
+  show(careers, line4, careerButton)
+);
 
-what.addEventListener("mouseenter", () => show(what, line1,overviewButton));
-who.addEventListener("mouseenter", () => show(who, line2,woverviewButton));
-insights.addEventListener("mouseenter", () => show(insights, line3,insightOverButton));
-careers.addEventListener("mouseenter", () => show(careers, line4,careerButton));
+what.addEventListener("mouseenter", () => show(what, line1, overviewButton));
+who.addEventListener("mouseenter", () => show(who, line2, woverviewButton));
+insights.addEventListener("mouseenter", () =>
+  show(insights, line3, insightOverButton)
+);
+careers.addEventListener("mouseenter", () =>
+  show(careers, line4, careerButton)
+);
 
 whatElement.addEventListener("mouseleave", () => remove());
 whoElement.addEventListener("mouseleave", () => remove());
@@ -161,14 +196,14 @@ var closeMenu = document.querySelector(".closeMenu");
 getMenu.addEventListener("click", () => {
   getMenu.classList.add("hide");
   taskList.classList.add("show_accordian");
- // nav.classList.add("showlist");
+  // nav.classList.add("showlist");
   closeMenu.classList.add("show");
 });
 
 closeMenu.addEventListener("click", () => {
   getMenu.classList.remove("hide");
   taskList.classList.remove("show_accordian");
- // nav.classList.remove("showlist");
+  // nav.classList.remove("showlist");
   closeMenu.classList.remove("show");
 });
 
@@ -189,9 +224,7 @@ closeMenu1.addEventListener("click", () => {
 
 // careers sevction
 
-
 //what
-
 
 // load images when button clicking
 
@@ -199,40 +232,35 @@ var newClicked = false;
 var solutionClicked = false;
 var whiteClicked = false;
 var caseClicked = false;
-var searchOption= false;
+var searchOption = false;
 
 // search bar
-var searchText =document.querySelector("input");
+var searchText = document.querySelector("input");
 var find = document.querySelector(".find");
 var searchBar = document.querySelector(".search");
 var cross = document.querySelector(".search__cross");
 
 find.addEventListener("click", () => {
-//  document.querySelector(".list").classList.add("addSearch");
-  document.querySelector("body").classList.add("no-scroll")
+  //  document.querySelector(".list").classList.add("addSearch");
+  document.querySelector("body").classList.add("no-scroll");
   searchBar.classList.add("showSearch");
-  searchText.focus()
+  searchText.focus();
   closeMenu.click();
   closeMenu1.click();
   document.querySelector(".options").classList.add("addOptions");
-
 });
 
 cross.addEventListener("click", () => {
-  document.querySelector("body").classList.remove("no-scroll")
+  document.querySelector("body").classList.remove("no-scroll");
   document.querySelector(".options").classList.remove("addOptions");
-  searchOption =false;
+  searchOption = false;
   //removeDesign()
-  console.log(opt)
-  if(!opt)
-  showAll()
+  console.log(opt);
+  if (!opt) showAll();
   searchBar.classList.remove("showSearch");
 });
 
 // handlebar
-
-
-
 
 var templatefile = document.querySelector("#template").innerHTML;
 //const loadButton = document.querySelector(".load");
@@ -246,7 +274,6 @@ const getCharacters = async () => {
   let characters = await charactersData.json();
   //console.log(characters)
   return characters;
-  
 };
 //console.log(getCharacters())
 //generate templates with given data
@@ -266,7 +293,7 @@ var endCharacter = 3;
 
 function showAll() {
   allClick = true;
-  removeDesign()
+  removeDesign();
   document.querySelector(".tags__all").classList.add("add-design");
   startCharacter = 0;
   endCharacter = 3;
@@ -289,24 +316,22 @@ const performCharacters = () => {
   });
 };
 
-
-
 //remove all classes
-function removeDesign(){
+function removeDesign() {
   document.querySelector(".tags__news-room").classList.remove("add-design");
   document.querySelector(".tags__solution").classList.remove("add-design");
   document.querySelector(".tags__white-paper").classList.remove("add-design");
   document.querySelector(".tags__case-studies").classList.remove("add-design");
-  newsCross.classList.remove("show-tag")
+  newsCross.classList.remove("show-tag");
   solutionCross.classList.remove("show-tag");
   whiteCross.classList.remove("show-tag");
   caseCross.classList.remove("show-tag");
- // allButton.classList.remove("add-design");
+  // allButton.classList.remove("add-design");
   newClicked = false;
   solutionClicked = false;
   whiteClicked = false;
   caseClicked = false;
-};
+}
 
 // genertae filtered template
 //  function printData(text){
@@ -316,7 +341,7 @@ function removeDesign(){
 //  }
 //News Room
 newButton.addEventListener("click", () => {
-  opt=false;
+  opt = false;
   //  removeDesign();
   allClick = false;
   newClicked = true;
@@ -328,7 +353,7 @@ newButton.addEventListener("click", () => {
 
 //solution
 solutionButton.addEventListener("click", () => {
-  opt=false;
+  opt = false;
   allClick = false;
   // removeDesign();
   // if(solutionClicked) return;
@@ -340,7 +365,7 @@ solutionButton.addEventListener("click", () => {
 
 //case studies
 caseStudies.addEventListener("click", () => {
-  opt=false;
+  opt = false;
   allClick = false;
   // removeDesign();
   caseClicked = true;
@@ -350,7 +375,7 @@ caseStudies.addEventListener("click", () => {
 });
 
 whiteButton.addEventListener("click", () => {
-  opt=false;
+  opt = false;
   allClick = false;
   whiteClicked = true;
   document.querySelector(".tags__all").classList.remove("add-design");
@@ -362,7 +387,7 @@ whiteButton.addEventListener("click", () => {
 //all
 var allClick = true;
 allButton.addEventListener("click", () => {
-  opt=false;
+  opt = false;
   removeDesign();
   document.querySelector(".tags__all").classList.add("add-design");
   htmlDisplay.innerHTML = "";
@@ -460,148 +485,188 @@ caseCross.addEventListener("click", () => {
 
 //scrolling bottom
 document.addEventListener("scroll", function (e) {
-  if(document.querySelector(".tags__all").classList.contains("add-design") && !opt){
+  if (
+    document.querySelector(".tags__all").classList.contains("add-design") &&
+    !opt
+  ) {
     let documentHeight = document.body.scrollHeight;
-    console.log(documentHeight)
+    console.log(documentHeight);
     let currentScroll = window.scrollY + window.innerHeight;
     let modifier = 10;
     if (currentScroll + modifier > documentHeight) {
-      if (!newClicked && !solutionClicked && !whiteClicked && !caseClicked && !searchOption && !opt )
-      console.log(newClicked,"",searchOption, solutionClicked,whiteClicked,caseClicked,opt)
+      if (
+        !newClicked &&
+        !solutionClicked &&
+        !whiteClicked &&
+        !caseClicked &&
+        !searchOption &&
+        !opt
+      )
+        console.log(
+          newClicked,
+          "",
+          searchOption,
+          solutionClicked,
+          whiteClicked,
+          caseClicked,
+          opt
+        );
       performCharacters();
     }
   }
-
 });
 
 var opt = false;
 var tagsShow = document.querySelectorAll(".tags__show");
-searchText.addEventListener("change",(e)=>{
+searchText.addEventListener("change", (e) => {
+  // searchOptions.textContent = "";
+  // e.target.value =""
   opt = true;
-  console.log(opt)
+  console.log(opt);
   allClick = false;
   cross.click();
-  document.querySelector("body").classList.remove("no-scroll")
- // removeDesign()
-  searchOption=true;
- let value =e.target.value;
- characters.then(data=>{
-  var newda = []; //data to store filtered data
-  //loop though all tags
-  Array.from(tagsShow).forEach(ele=>{
-    console.log(ele.children[0].firstChild.data)
-    if(ele.classList.contains("add-design")){
-        var data1 = data.filter((el) => el.tag === ele.children[0].firstChild.data);
+  document.querySelector("body").classList.remove("no-scroll");
+  // removeDesign()
+  searchOption = true;
+  let value = e.target.value;
+  characters.then((data) => {
+    var newda = []; //data to store filtered data
+    //loop though all tags
+    Array.from(tagsShow).forEach((ele) => {
+      console.log(ele.children[0].firstChild.data);
+      if (ele.classList.contains("add-design")) {
+        var data1 = data.filter(
+          (el) => el.tag === ele.children[0].firstChild.data
+        );
         newda.push(...data1);
       }
-  })
-  if(newda.length== 0) newda.push(...data); //push all if empty
- 
-  var data = newda.filter((ele) =>{
-    console.log(ele.title);
-    let string1 = ele.title.split(" ");
-    console.log(string1)
-    let res =  string1.some(inner=>{
-      if(inner.toLowerCase().indexOf(value.toLowerCase()) == 0){
+    });
+    if (newda.length == 0) newda.push(...data); //push all if empty
+    var finalData = [];
+    var data = newda.filter((ele) => {
+     // console.log(ele.title);
+      let string1 = ele.title.split(" ");
+     // console.log(string1);
+      let res = string1.some((inner) => {
+        if (inner.toLowerCase().indexOf(value.toLowerCase()) == 0) {
+          return true;
+        }
+      });
+      if (res) {
+        finalData.push(ele);
         return true;
-      }  
-    })
-    if(res) return true;
-    else return false;
-    //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
-  });
+      } else if (value.indexOf(" ") > -1) {
+        if (ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+          finalData.push(ele);
+        }
+        return true;
+      } else return false;
 
-  htmlDisplay.innerHTML = "";
-  //console.log(data);
-  if(data.length == 0){
-    data.push(...[{title: "No results found"}])
-  }
-  
-  generateTemplates(data);
-  // e.target.value = "";
-  // searchOptions.textContent = "";
- })
-})
+      //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
+    });
+    // console.log(finalData)
+    htmlDisplay.innerHTML = "";
+    //console.log(data);
+    if (finalData.length == 0) {
+      finalData.push(...[{ title: "No results found" }]);
+    }
+
+    generateTemplates(finalData);
+    // e.target.value = "";
+    // searchOptions.textContent = "";
+  });
+});
 
 //suggestions
 var searchOptions = document.querySelector(".search__options");
-searchText.addEventListener("input",(e)=>{
+searchText.addEventListener("input", (e) => {
   allClick = false;
- let value =e.target.value;
- searchOption.textContent = "";
- characters.then(data=>{
-  if(value == "") searchOption.textContent = "";
-  else{
-     var newda = [];
-     //loop through all tags
-    Array.from(tagsShow).forEach(ele=>{
-      console.log(ele.children[0].firstChild.data)
-      if(ele.classList.contains("add-design")){
-          var data1 = data.filter((el) => el.tag === ele.children[0].firstChild.data);
+  let value = e.target.value;
+  searchOption.textContent = "";
+  characters.then((data) => {
+    if (value == "") searchOption.textContent = "";
+    else {
+      var newda = [];
+      //loop through all tags
+      Array.from(tagsShow).forEach((ele) => {
+        console.log(ele.children[0].firstChild.data);
+        if (ele.classList.contains("add-design")) {
+          var data1 = data.filter(
+            (el) => el.tag === ele.children[0].firstChild.data
+          );
           newda.push(...data1);
         }
-    })
-    console.log(newda);
-    if(newda.length== 0)newda.push(...data); //push all if empty
-    console.log(newda)
-    var data = newda.filter((ele) =>{
-      console.log(ele.title);
-      let string1 = ele.title.split(" ");
-      console.log(string1)
-      let res =  string1.some(inner=>{
-        if(inner.toLowerCase().indexOf(value.toLowerCase()) == 0){
+      });
+     // console.log(newda);
+      if (newda.length == 0) newda.push(...data); //push all if empty
+      //console.log(newda);
+      let finalData=[];
+      var data = newda.filter((ele) => {
+      //  console.log(ele.title);
+        let string1 = ele.title.split(" ");
+      //  console.log(string1);
+        let res = string1.some((inner) => {
+          if (inner.toLowerCase().indexOf(value.toLowerCase()) == 0) {
+            finalData.push(ele);
+            return true;
+          }
+        });
+        if(res) {
+          finalData.push(ele);
           return true;
-        }  
-      })
-      if(res) return true;
-      else return false;
-      //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
-    });
-  
-    searchOptions.textContent = "";
-    let listBucket = document.createElement("div");
-    listBucket.classList.add("Fget")
-    searchOptions.append(listBucket);
-    
-    if(data.length == 0){
-      let lists = document.createElement("div")
-     lists.classList.add("options__list")
-     lists.textContent += "No Results Found";
-     listBucket.append(lists)
-    }
-    //let i = 0
-    data.map(ele=>{
-   //  console.log(ele.title)
-     if(data.length < 12){
-      let lists = document.createElement("div")
-      lists.classList.add("options__list")
-     lists.textContent += ele.title;
-     lists.classList.add("options__lists")
-     lists.tabIndex = 2;
-     lists.addEventListener("click",()=>{
-      // console.log(e.target)
-      var printData= data.filter(ele1=>ele1.title===ele.title);
-      console.log(printData)
-      opt = true;
-      // console.log(opt)
-      cross.click();
-      console.log(e.target);
-      e.target.value = "";
-      
+        } else if (value.indexOf(" ") > -1) {
+          if (ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1) {
+            finalData.push(ele);
+          }
+          return true;
+        } else return false;
+        //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
+      });
+      console.log(finalData)
       searchOptions.textContent = "";
-      htmlDisplay.innerHTML = ""
-      generateTemplates(printData);
-     })
+      let listBucket = document.createElement("div");
+      listBucket.classList.add("Fget");
+      searchOptions.append(listBucket);
 
-     listBucket.append(lists)
-     } 
-    })
-  }
- })
-})
+      if (finalData.length == 0) {
+        let lists = document.createElement("div");
+        lists.classList.add("options__list");
+        lists.textContent += "No Results Found";
+        listBucket.append(lists);
+      }
+      //let i = 0
+      finalData.map((ele) => {
+        //  console.log(ele.title)
+        if (finalData.length < 12) {
+          let lists = document.createElement("div");
+          lists.classList.add("options__list");
+          lists.textContent += ele.title;
+          lists.classList.add("options__lists");
+          lists.tabIndex = 2;
+          lists.addEventListener("click", () => {
+            // console.log(e.target)
+            var printData = data.filter((ele1) => ele1.title === ele.title);
+            console.log(printData);
+            opt = true;
+            // console.log(opt)
+            cross.click();
+            console.log(e.target);
+            e.target.value = "";
+
+            searchOptions.textContent = "";
+            htmlDisplay.innerHTML = "";
+            generateTemplates(printData);
+          });
+
+          listBucket.append(lists);
+        }
+      });
+    }
+  });
+});
 
 //accordian
-const list= document.querySelectorAll(".list");
+const list = document.querySelectorAll(".list");
 function accordion(e) {
   e.stopPropagation();
 
@@ -623,14 +688,14 @@ for (i = 0; i < list.length; i++) {
 }
 
 //document
-document.addEventListener("scroll",()=>{
+document.addEventListener("scroll", () => {
   let x = window.scrollY;
-  if(x > 100){
-   // console.log(x)
-   header.classList.remove("header-height")
-    header.classList.add("changeNav")
-  }else{
-    header.classList.remove("changeNav")
-    header.classList.add("header-height")
+  if (x > 100) {
+    // console.log(x)
+    header.classList.remove("header-height");
+    header.classList.add("changeNav");
+  } else {
+    header.classList.remove("changeNav");
+    header.classList.add("header-height");
   }
-})
+});

@@ -2,7 +2,7 @@
 .header-height{
   height: 100px;
   background-color: black;
-  transition: all 2.7 ease-in;
+  transition: all 0.7s ease;
 }
 .header {
   position: fixed;
@@ -10,7 +10,6 @@
   //  border: 1px solid red;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 100%;
- 
   display: flex;
   align-items: center;
    justify-content: center;
@@ -240,6 +239,10 @@
     color: $gradientcolor3;
   }
 }
+.search__cross1{
+  font-size: 21px;
+  color: $gradientcolor3;
+}
 .show {
   @media only screen and (max-width: 1000px) {
     left: 0 !important;
@@ -281,7 +284,7 @@
   display: block !important;
 }
 .changeNav{
-  transition: all 0.7 ease;
+  transition: all 0.7s ease-in-out;
 height:85px;
 background-color: $navcolor;
 }
