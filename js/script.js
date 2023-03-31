@@ -622,22 +622,23 @@ searchText.addEventListener("input", (e) => {
         } else return false;
         //return ele.title.toLowerCase().indexOf(value.toLowerCase()) > -1
       });
-      console.log(finalData)
+      let uniqueData =removeRepeat(finalData);
+      console.log(uniqueData)
       searchOptions.textContent = "";
       let listBucket = document.createElement("div");
       listBucket.classList.add("Fget");
       searchOptions.append(listBucket);
 
-      if (finalData.length == 0) {
+      if (uniqueData.length == 0) {
         let lists = document.createElement("div");
         lists.classList.add("options__list");
         lists.textContent += "No Results Found";
         listBucket.append(lists);
       }
       //let i = 0
-      finalData.map((ele) => {
+      uniqueData.map((ele) => {
         //  console.log(ele.title)
-        if (finalData.length < 12) {
+        if (uniqueData.length < 12) {
           let lists = document.createElement("div");
           lists.classList.add("options__list");
           lists.textContent += ele.title;
@@ -699,3 +700,6 @@ document.addEventListener("scroll", () => {
     header.classList.add("header-height");
   }
 });
+function removeRepeat(arr){
+  return [...new Set(arr)];
+}
